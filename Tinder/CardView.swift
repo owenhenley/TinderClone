@@ -10,21 +10,27 @@ import UIKit
 
 class CardView: UIView {
     
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
-    fileprivate let threshhold: CGFloat = 100
+    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "owenBike"))
+    // set a movement threshold
+    fileprivate let threshold: CGFloat = 100
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.cornerRadius = 12
-        clipsToBounds = true
-        addSubview(imageView)
-        imageView.fillSuperview()
+        setupViews()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         addGestureRecognizer(panGesture)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func setupViews() {
+        layer.cornerRadius = 12
+        clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        addSubview(imageView)
+        imageView.fillSuperview()
     }
     
     @objc fileprivate func handlePan(gesture: UIPanGestureRecognizer) {
@@ -50,8 +56,8 @@ class CardView: UIView {
     fileprivate func handleEnded(_ gesture: UIPanGestureRecognizer) {
         // set card movement threshold for bool management
         let translationDirection: CGFloat = gesture.translation(in: nil).x > 0 ? 1 : -1
-        let shouldDismissCard = abs(gesture.translation(in: nil).x) > threshhold
-        
+        let shouldDismissCard = abs(gesture.translation(in: nil).x) > threshold
+        // damping does the spring bounce
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseInOut, animations: {
             if shouldDismissCard {
                 self.frame = CGRect(x: 1000 * translationDirection, y: 0, width: self.frame.width, height: self.frame.height)

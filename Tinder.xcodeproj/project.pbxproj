@@ -17,6 +17,8 @@
 		3E9DB0F721D50F9400C7CFBA /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DB0F621D50F9400C7CFBA /* TopNavigationStackView.swift */; };
 		3E9DB0F921D5116A00C7CFBA /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DB0F821D5116A00C7CFBA /* UIColor+Ext.swift */; };
 		3E9DB0FC21D52A6B00C7CFBA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DB0FB21D52A6B00C7CFBA /* CardView.swift */; };
+		3ED5722E21D58D330056220B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5722D21D58D330056220B /* Constants.swift */; };
+		3ED5723021D58D4E0056220B /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5722F21D58D4E0056220B /* ImageConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		3E9DB0F621D50F9400C7CFBA /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		3E9DB0F821D5116A00C7CFBA /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3E9DB0FB21D52A6B00C7CFBA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3ED5722D21D58D330056220B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3ED5722F21D58D4E0056220B /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		3E9DB0D021D4EC1000C7CFBA /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				3ED5722C21D58D100056220B /* Supporting Files */,
 				3E9DB0D121D4EC1000C7CFBA /* Models */,
 				3E9DB0D421D4EC1000C7CFBA /* Controllers */,
 				3E9DB0DB21D4EC1000C7CFBA /* Views */,
@@ -126,10 +131,9 @@
 		3E9DB0E021D4EC1000C7CFBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E9DB0E121D4EC1000C7CFBA /* AppDelegate.swift */,
 				3E9DB0E321D4EC1100C7CFBA /* Assets.xcassets */,
 				3E9DB0E821D4EC1100C7CFBA /* Info.plist */,
-				3E9DB0E121D4EC1000C7CFBA /* AppDelegate.swift */,
-				3E9DB0FA21D5116E00C7CFBA /* Extensions */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -141,6 +145,16 @@
 				3E9DB0F821D5116A00C7CFBA /* UIColor+Ext.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		3ED5722C21D58D100056220B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5722D21D58D330056220B /* Constants.swift */,
+				3E9DB0FA21D5116E00C7CFBA /* Extensions */,
+				3ED5722F21D58D4E0056220B /* ImageConstants.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,12 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9DB0FC21D52A6B00C7CFBA /* CardView.swift in Sources */,
+				3ED5723021D58D4E0056220B /* ImageConstants.swift in Sources */,
 				3E9DB0E221D4EC1000C7CFBA /* AppDelegate.swift in Sources */,
 				3E9DB0F521D5091600C7CFBA /* SwipeControlBottomStackView.swift in Sources */,
 				3E9DB0EF21D4EFE300C7CFBA /* DashboardVC.swift in Sources */,
 				3E9DB0F921D5116A00C7CFBA /* UIColor+Ext.swift in Sources */,
 				3E9DB0F121D4F0AB00C7CFBA /* AutoLayout+Ext.swift in Sources */,
 				3E9DB0F721D50F9400C7CFBA /* TopNavigationStackView.swift in Sources */,
+				3ED5722E21D58D330056220B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

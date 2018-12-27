@@ -10,13 +10,13 @@ import UIKit
 
 class TopNavigationStackView: UIStackView {
     
+    // setup top bar buttons
     let settingsButton = UIButton(type: .system)
     let messagesButton = UIButton(type: .system)
     let logoImage = UIImageView(image: #imageLiteral(resourceName: "app_icon"))
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         distribution = .equalCentering
         setHeight(as: 73)
         isLayoutMarginsRelativeArrangement = true

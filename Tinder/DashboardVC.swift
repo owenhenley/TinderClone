@@ -11,7 +11,7 @@ import UIKit
 class DashboardVC: UIViewController {
     
         // MARK: - Properties
-    
+    // setup main views
     let topStackView = TopNavigationStackView()
     let swipeView = UIView()
     let bottomStackView = SwipeControlBottomStackView()
@@ -19,11 +19,10 @@ class DashboardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setupDummyCards()
+        setupDummyCard()
     }
     
     fileprivate func setupViews() {
-
         let mainStackView = UIStackView(arrangedSubviews: [topStackView, swipeView, bottomStackView])
         mainStackView.axis = .vertical
         
@@ -36,14 +35,12 @@ class DashboardVC: UIViewController {
         mainStackView.bringSubviewToFront(swipeView)
     }
     
-    fileprivate func setupDummyCards() {
-        print("Setting up Dummy Cards")
-        
+    // local version of the cards
+    fileprivate func setupDummyCard() {
         let swipeCardView = CardView(frame: .zero)
         swipeView.addSubview(swipeCardView)
         swipeCardView.fillSuperview()
     }
-    
     
     
     

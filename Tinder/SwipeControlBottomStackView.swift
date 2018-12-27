@@ -12,6 +12,10 @@ class SwipeControlBottomStackView: UIStackView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
+    }
+    
+    fileprivate func setupView() {
         distribution = .fillEqually
         setHeight(as: 88)
         
@@ -21,15 +25,12 @@ class SwipeControlBottomStackView: UIStackView {
             return button
         }
         
-        subviews.forEach { (view) in
-            addArrangedSubview(view)
-        }
+        subviews.forEach { (view) in addArrangedSubview(view) }
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     
     
