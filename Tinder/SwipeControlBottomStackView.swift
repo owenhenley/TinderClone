@@ -16,12 +16,12 @@ class SwipeControlBottomStackView: UIStackView {
     }
     
     fileprivate func setupView() {
-        distribution = .fillEqually
         setHeight(as: 88)
         
-        let subviews = [#imageLiteral(resourceName: "refresh_circle"), #imageLiteral(resourceName: "dismiss_circle"), #imageLiteral(resourceName: "super_like_circle"), #imageLiteral(resourceName: "like_circle"), #imageLiteral(resourceName: "boost_circle")].map { (image) -> UIView in
+        let subviews = [Icon.Refresh, Icon.Nope, Icon.SuperLike, Icon.Like, Icon.Boost].map { (image) -> UIView in
             let button = UIButton(type: .system)
             button.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
+            button.contentMode = .scaleAspectFit
             return button
         }
         

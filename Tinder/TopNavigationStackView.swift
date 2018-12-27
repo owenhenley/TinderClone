@@ -13,7 +13,7 @@ class TopNavigationStackView: UIStackView {
     // setup top bar buttons
     let settingsButton = UIButton(type: .system)
     let messagesButton = UIButton(type: .system)
-    let logoImage = UIImageView(image: #imageLiteral(resourceName: "app_icon"))
+    let logoImage = UIImageView(image: Icon.Logo)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,8 +22,8 @@ class TopNavigationStackView: UIStackView {
         isLayoutMarginsRelativeArrangement = true
         layoutMargins = .init(top: 0, left: 16, bottom: 0, right: 16)
         
-        settingsButton.setImage(#imageLiteral(resourceName: "top_left_profile").withRenderingMode(.alwaysOriginal), for: .normal)
-        messagesButton.setImage(#imageLiteral(resourceName: "top_right_messages").withRenderingMode(.alwaysOriginal), for: .normal)
+        settingsButton.setImage(Icon.Profile.withRenderingMode(.alwaysOriginal), for: .normal)
+        messagesButton.setImage(Icon.Messages.withRenderingMode(.alwaysOriginal), for: .normal)
         logoImage.contentMode = .scaleAspectFit
         
         [settingsButton, logoImage, messagesButton].forEach { (view) in

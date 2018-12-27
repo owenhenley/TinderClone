@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				3ED5722D21D58D330056220B /* Constants.swift */,
-				3E9DB0FA21D5116E00C7CFBA /* Extensions */,
 				3ED5722F21D58D4E0056220B /* ImageConstants.swift */,
+				3E9DB0FA21D5116E00C7CFBA /* Extensions */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
